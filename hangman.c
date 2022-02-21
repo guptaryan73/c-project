@@ -1,83 +1,64 @@
-//Learnprogramo-programming made simple
 #include<stdio.h>
 #include<string.h>
-
 int main()
 {
 int i,j,c,count=0,ans=0,flag=0,*ptr;
-char a[1][10]={"dogodo"};
+char a[1][6]={"sky"};
 char b[10],alpha;
 char d='_';
+
 c=strlen(&a[0][0]);
-//printf("\n\t\t**************\n\n\t\t\t");
-printf("\n\n\t\t\t ** HANGMAN ** \n");
+printf("\t\t\t ** HANGMAN ** \n");
 	printf("\n\t\t\t**************\t\t\t");
 		printf("\n\t\t\t..............\n\n\t\t\t  ");
 for(j=0;j<c;j++)
-	  { printf("%c ",d);
-	  b[j]=d;}
-	  //printf("\n\n\t\t*****************");
-	  printf("\n\n\t\t\t..............\t\t\t");
-		printf("\n\n\t\t\t**************");
-// for(j=0;j<c;j++) printf("\n %c",b[j]); //{	   ptr=&b[j];
-	 //  printf("\n %c",*ptr); }
+	  {
+	  printf("%c ",d);
+	  b[j]=d;
+	  }
+	  printf("\n\t\t\t..............\t\t\t");
+	  printf("\n\t\t\t**************");
 
+/*This loop is used to guess one letter at a time from the secret word and you will repeat this process untill 
+all the correct letters have been guessed or the user has entered 5 wrong letters.
+*/
 while (count<6)//||(ans<c))
  {
  flag=0;
-	   printf("\n\n\n\n\n\n\t enter a char");
-		alpha=getche();
-	  //	printf("%c",alpha);
+	   printf("\n\n\n\t Plz Enter a Character	");
+		alpha=getchar();
 		for(i=0;i<c;i++)
 		{
 			if (alpha==a[0][i])
-		   {	b[i]=a[0][i];
-		   flag=1;
-			ans++; }
-			//else if(b[i]!=d) b[i]=a[0][i];
-			//else b[i]=d;
-		   //	printf("\n u r correct");  }
-		   //	if(ans==c) goto man; }
-			//printf("\n ans=%d",ans);}
-
-			//printf("\n count=%d",count);
-
+		    {
+		   		b[i]=a[0][i];
+		   		flag=1;
+				ans++; 
+			}
 		}
-
-		printf("\n\n\t\t\t ** HANGMAN ** \n");
+		printf("\n\n\t\t\t ** Knowledge 360 ** \n");
+		printf("\n\t\t\t ** HANGMAN ** \n");
 		printf("\n\t\t\t**************\t\t\t");
 		printf("\n\t\t\t..............\n\n\t\t\t  ");
 		for(i=0;i<c;i++)
 		printf("%c ",b[i]);
-		printf("\n\n\t\t\t..............\t\t\t");
-		printf("\n\n\t\t\t**************");
+		printf("\n\t\t\t..............\t\t\t");
+		printf("\n\t\t\t**************");
 
 		if(flag==0)
-		{count++;
-		printf("\n\n\n\n\t\t%c is a wrong guess",alpha);
-		printf("\n\n\t\t (u have %d more guesses)",6-count);}
+			{
+		count++;
+		printf("\n\t\t%c is a Wrong Guess",alpha);
+		printf("\n\t\t (You Have %d More Guesses Left)",6-count);
+			}
 
 		else{
-		printf("\n\n\t\t u r correct!!");
-	   printf("\n\t\t( u have %d more words to go)",c-ans);}
-	   //	printf("\n ans=%d",ans);
-	   //	printf("\n count=%d",count);
+		printf("\n\t\t You Are Correct !!");
+	   printf("\n\t\t( You Have %d More Words To Go)",c-ans);
+	   		}
 		if(ans==c) break;
  }
- if(ans==c) printf("\n\n\n\t you won");
- else printf("\n\n\n\t\t  u lose.\n\n \t\t **SORRY  U R HANGED**");
-
-	  /*	if(output[i]!='_')
-		output[i]=a[0][i];
-		elseif(b[j]==a[0][i])
-		output[i]==a[0][i];
-		else
-		output[i]='_';
-		}
-		for(i=0;i<c;i++)
-		printf("%c",output[i])
-
- }      */
-getch();
-
+ if(ans==c) printf("\n\n\t You Won !!");
+ else printf("\n\t\t  You Lost !!\n \t\t **SORRY  YOU ARE HANGED**");
+return 1;
 }
