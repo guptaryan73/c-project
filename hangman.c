@@ -1,13 +1,5 @@
-/*The main purpose of this Hangman game project is to illustrate the use of control structures.
-Hangman Game has been designed to demonstrate different application formats and syntaxes of C programming language.
-
-The source code of the game is easy, short, understandable, and user friendly and when you start the game, the game asks you to guess a character.
-The Hangman Game in C gives five chances to guess and If you are able to match the character in five guesses, you will be the winner.
-If you fail to match the character in fives guesses, you will lose the game and hanged by Hangman Game in C.*/
-
 #include<stdio.h>
 #include<string.h>
-
 //Start of main function
 int main()
 {
