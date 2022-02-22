@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<string.h>
-//Start of main function
 int main()
 {
 int i,j,c,count=0,ans=0,flag=0,*ptr;
@@ -10,7 +9,6 @@ char b[10],alpha;
 char d='_';
 
 c=strlen(&a[0][0]);
-printf("\n\t\t\t ** Knowledge 360 ** \n");
 printf("\t\t\t ** HANGMAN ** \n");
 	printf("\n\t\t\t**************\t\t\t");
 		printf("\n\t\t\t..............\n\n\t\t\t  ");
@@ -39,7 +37,6 @@ while (count<6)//||(ans<c))
 				ans++; 
 			}
 		}
-		printf("\n\n\t\t\t ** Knowledge 360 ** \n");
 		printf("\n\t\t\t ** HANGMAN ** \n");
 		printf("\n\t\t\t**************\t\t\t");
 		printf("\n\t\t\t..............\n\n\t\t\t  ");
