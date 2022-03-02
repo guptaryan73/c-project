@@ -137,7 +137,7 @@ int main(void)
       if(wrongTry <= 0)       /**if the player can not guess the whole word in 5 chances**/
       {
           printf("\n\n\t The Word was %s ",hangmanWord);
-	      printf("\n\n\t Better luck next!!!");
+	      printf("\n\n\t Better luck next time!!!");
 
       }
 getchar();
