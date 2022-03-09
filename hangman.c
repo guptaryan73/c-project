@@ -136,7 +136,6 @@ int main(void)
 }
 
 
-
 void showHangman(int choice)
 {
     switch(choice)
